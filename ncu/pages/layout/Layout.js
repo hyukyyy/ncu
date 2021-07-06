@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ContentWrapper from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 import Side from "./Side";
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
     <>
       <Header scrollTop={scrollTop} openSideMenu={openSideMenu} />
       <Side sideMenu={sideMenu} closeSideMenu={closeSideMenu} />
-      {children}
+      <ContentWrapper>{children}</ContentWrapper>
       <Footer />
     </>
   );

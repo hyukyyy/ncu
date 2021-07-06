@@ -1,5 +1,16 @@
 import styled, { css, keyframes } from "styled-components";
 
+export const SideBackground = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: -1;
+  display: ${(props) => (props.sideMenu ? "block" : "none")};
+`;
+
 export const SideWrapper = styled.div`
   position: fixed;
   left: 0;
