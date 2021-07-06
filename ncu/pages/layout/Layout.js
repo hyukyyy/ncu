@@ -5,7 +5,7 @@ import Side from "./Side";
 
 const Layout = ({ children }) => {
   const [scrollTop, setScrollTop] = useState(0);
-  const [sideMenu, setSideMenu] = useState(false);
+  const [sideMenu, setSideMenu] = useState(null);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
