@@ -5,7 +5,7 @@ import Side from "./Side";
 
 const Layout = ({ children }) => {
   const [scrollTop, setScrollTop] = useState(0);
-  const [sideMenu, setSideMenu] = useState(null);
+  const [sideMenu, setSideMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -20,10 +20,18 @@ const Layout = ({ children }) => {
     console.log(scrollTop);
   };
 
+  const openSideMenu = () => {
+    setSideMenu(true);
+    console.log(sideMenu);
+  };
+  const closeSideMenu = () => {
+    setSideMenu(false);
+    console.log(sideMenu);
+  };
   return (
     <>
-      <Header />
-      <Side />
+      <Header scrollTop={scrollTop} openSideMenu={openSideMenu} />
+      <Side sideMenu={sideMenu} closeSideMenu={closeSideMenu} />
       {children}
       <Footer />
     </>

@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
   top: 0;
   width: 100vw;
   height: 6vh;
-  background-color: black;
+  background-color: rgba(0, 0, 0, ${(props) => 1 - props.scrollTop * 8});
   color: white;
   text-align: center;
 `;
@@ -16,8 +16,9 @@ export const SideMenuButton = styled.div`
   display: inline-block;
   width: 5rem;
   height: 100%;
-  background-color: white;
-  color: black;
+  // background-color: white;
+  // color: black;
+  cursor: pointer;
 `;
 
 export const HeaderMenu = styled.div`

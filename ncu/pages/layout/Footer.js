@@ -1,5 +1,6 @@
+import { FooterWrapper } from "../../styles/footerComponents";
 const Footer = () => {
-  return <div style={{ width: "100vw", background: "orange" }}>footer</div>;
+  return <FooterWrapper>footer</FooterWrapper>;
 };
 
 export default Footer;

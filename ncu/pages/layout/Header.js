@@ -1,8 +1,8 @@
 import { HeaderWrapper, SideMenuButton } from "../../styles/headerComponents";
-const Header = () => {
+const Header = ({ openSideMenu, scrollTop }) => {
   return (
-    <HeaderWrapper>
-      <SideMenuButton>Menu</SideMenuButton>
+    <HeaderWrapper scrollTop={scrollTop}>
+      <SideMenuButton onClick={() => openSideMenu()}>Menu</SideMenuButton>
       header
     </HeaderWrapper>
   );
