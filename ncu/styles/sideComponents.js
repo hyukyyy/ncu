@@ -14,6 +14,7 @@ export const SideBackground = styled.div`
 export const SideWrapper = styled.div`
   position: fixed;
   left: 0;
+  top: 0;
   width: 20vw;
   height: 100vh;
   background-color: black;
