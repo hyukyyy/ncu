@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import "../styles/reset.css";
 import Layout from "./layout/Layout";
+import Login from "./Login";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <>
       <header>
@@ -10,9 +13,14 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </header>
-      <Layout style={{ fontFamily: "Roboto" }}>
-        <Component {...pageProps} />
-      </Layout>
+
+      {router.pathname === "/login" ? (
+        <Login />
+      ) : (
+        <Layout style={{ fontFamily: "Roboto" }}>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }
